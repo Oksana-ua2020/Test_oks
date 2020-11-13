@@ -39,14 +39,14 @@ let fB;
 let fK;
 fB = 9850;
 fK = Math.trunc(fB/1024);
-console.log('задача № Integer3 ', fK);  
+console.log('задача № Integer3: ', fK);  
 //-------//
 let n2 = 28;
 let n21;
 let n22;
 n21 = Math.trunc(n2/10);
 n22 = n2%10;
-console.log('задача № Integer7 ','Число:', n2,'; Сумма =', n21+n22, '; Произведение =', n21*n22);
+console.log('задача № Integer7: ','Число:', n2,'; Сумма =', n21+n22, '; Произведение =', n21*n22);
 //-------//
 let n3 = 379;
 let n31;
@@ -55,24 +55,24 @@ let n33;
 n31 = Math.trunc(n3/100);
 n32 = Math.trunc(n3/10)-n31*10;
 n33 = n3%10;
-console.log('задача № Integer15 ', 'Число:', n3,'; Результат:', Number(String(n32) + String(n31) + String(n33)));
+console.log('задача № Integer15: ', 'Число:', n3,'; Результат:', Number(String(n32) + String(n31) + String(n33)));
 //-------//
-let k = 9;
-let mon = 1;
-let tue = 2;
-let wed = 3;
-let thu = 4;
-let fri = 5;
-let sat = 6;
-let sun = 7;
-let nWeek;
-let nDay;
-
-nWeek = Math.trunc((k-1)/7);
-nDay = k%7;
-
-
-
-
-
-console.log(nWeek, nDay);
+let k = 281;
+let nDayIr;
+nDayIr = k%7;
+let nDay = nDayIr < 3 ? nDayIr + 5 : nDayIr - 2;
+console.log('задача № Integer27: ', 'Порядковый № дня -', k, 'День недели:', nDay);
+//-------//
+let Year = 0;
+let Vek = (Year >0 ? Math.trunc((Year-1)/100)+1 : 'Это до нашей эры! Не буду считать.');
+console.log('задача № Integer30: ', 'Введенный год:', Year, '. Какой век? ', Vek);
+//-------//
+let a = 9;
+let b = 0;
+let propTrue = a > 2 && b <= 3;
+console.log('задача № Boolean4: ', 'A =', a, ', B =', b, 'Высказывание "Справедливы неравенства А > 2 и В <=3"' , propTrue === true ? 'истинно.' : 'ложно.');
+//-------//
+let a1 = 1;
+let b1 = 1;
+let propTrue1 = a1 % 2 > 0 && b1 % 2 > 0;
+console.log('задача № Boolean8: ', 'A =', a1, ', B =', b1, 'Высказывание "Каждое из чисел А и В нечетное"' , propTrue1 === true ? 'истинно.' : 'ложно.');
