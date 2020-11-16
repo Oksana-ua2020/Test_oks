@@ -39,7 +39,7 @@ let fB;
 let fK;
 fB = 9850;
 fK = Math.trunc(fB/1024);
-console.log('задача № Integer3: ', fK);  
+console.log('задача № Integer3: Размер в байтах:', fB, 'Размер в полных килобайтах:', fK);  
 //-------//
 let n2 = 28;
 let n21;
@@ -61,7 +61,7 @@ let k = 281;
 let nDayIr;
 nDayIr = k%7;
 let nDay = nDayIr < 3 ? nDayIr + 5 : nDayIr - 2;
-console.log('задача № Integer27: ', 'Порядковый № дня -', k, 'День недели:', nDay);
+console.log('задача № Integer27: ', 'Порядковый № дня -', k, '. День недели:', nDay);
 //-------//
 let Year = 0;
 let Vek = (Year >0 ? Math.trunc((Year-1)/100)+1 : 'Это до нашей эры! Не буду считать.');
@@ -76,3 +76,14 @@ let a1 = 1;
 let b1 = 1;
 let propTrue1 = a1 % 2 > 0 && b1 % 2 > 0;
 console.log('задача № Boolean8: ', 'A =', a1, ', B =', b1, 'Высказывание "Каждое из чисел А и В нечетное"' , propTrue1 === true ? 'истинно.' : 'ложно.');
+//-------//
+let n = 101;
+let nEven = n%2;
+let nTreeDig = n > 99 ? 1 : 0;
+console.log ('задача № Boolean17: Число:', n, 'Высказывание "Данное число является нечетным трехзначным"', (nEven + nTreeDig) > 1 ? 'истинно.' : 'ложно.');
+//-------//
+let nIn = 1241;
+let n_L_r = String(nIn);
+let n_R_l = (n_L_r.charAt(3) + n_L_r.charAt(2) + n_L_r.charAt(1) + n_L_r.charAt(0));
+let txt = 'Высказывание "Данное число читается одинаково слева направо и справа налево"';
+console.log('задача № Boolean23: Число:', nIn, n_L_r.length !== 4? 'не четырехзначное!' : (n_L_r === n_R_l ? txt + ' истинно.' : txt + ' ложно.'));
