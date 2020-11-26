@@ -78,12 +78,12 @@ let propTrue1 = a1 % 2 > 0 && b1 % 2 > 0;
 console.log('задача № Boolean8: ', 'A =', a1, ', B =', b1, 'Высказывание "Каждое из чисел А и В нечетное"' , propTrue1 === true ? 'истинно.' : 'ложно.');
 //-------//
 let n = 101;
-let nEven = n%2;
-let nTreeDig = n > 99 ? 1 : 0;
-console.log ('задача № Boolean17: Число:', n, 'Высказывание "Данное число является нечетным трехзначным"', (nEven + nTreeDig) > 1 ? 'истинно.' : 'ложно.');
+let nEven = Boolean(n%2);
+let nTreeDig = Boolean(n > 99);
+console.log ('задача № Boolean17: Число:', n, 'Высказывание "Данное число является нечетным трехзначным"', nEven && nTreeDig ? 'истинно.' : 'ложно.');
 //-------//
 let nIn = 1221;
 let n_L_R = String(nIn);
-let n_R_L = (n_L_R.charAt(3) + n_L_R.charAt(2) + n_L_R.charAt(1) + n_L_R.charAt(0));
+let n_R_L = (n_L_R[3] + n_L_R[2] + n_L_R[1] + n_L_R [0]);
 let txt = 'Высказывание "Данное число читается одинаково слева направо и справа налево"';
 console.log('задача № Boolean23: Число:', nIn, n_L_R.length !== 4? 'не четырехзначное!' : (n_L_R === n_R_L ? txt + ' истинно.' : txt + ' ложно.'));
