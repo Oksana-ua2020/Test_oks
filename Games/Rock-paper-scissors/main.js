@@ -15,18 +15,17 @@ let signFault = 0;
 let signFaultWord;
 let word1num;
 let word2num;
-let wordUsEsc = null;
+let wordUsEsc;
 
-if (confirm("Поиграем в 'Камень-ножницы-бумага'?")) {
-  let word1us = prompt('Введи любое слово из трех: камень; ножницы; бумага.');
-  let word2us = prompt('Введи второе слово. "Напоминаю: камень, ножницы, бумага"');
+// if (confirm("Поиграем в 'Камень-ножницы-бумага'?")) {
+  // let word1user = prompt('Введи любое слово из трех: камень; ножницы; бумага.');
+  // let word2user = prompt('Введи второе слово. "Напоминаю: камень, ножницы, бумага"');
+  let word1user = 'камень';//
+  let word2user = 'ножницы';
+  if (Boolean(word1user) && Boolean(word2user)) {
 
-  if (word1us != wordUsEsc && word2us != wordUsEsc) {
-    let word1user = word1us;
-    let word2user = word2us;
-
-    console.log(word1user);
-    console.log(word2user);
+    console.log(word1user);//
+    console.log(word2user);//
 
     let word1userLow = word1user.toLowerCase();
     let word2userLow = word2user.toLowerCase();
@@ -109,4 +108,4 @@ if (confirm("Поиграем в 'Камень-ножницы-бумага'?")) 
     confirm(rem4);
     console.log(rem4); //фигвам
   }
-}
+// }
