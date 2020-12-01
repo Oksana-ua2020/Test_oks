@@ -15,7 +15,7 @@ let signFault = 0;
 let signFaultWord;
 let word1num;
 let word2num;
-let wordUsEsc;
+// let wordUsEsc;
 
 // if (confirm("Поиграем в 'Камень-ножницы-бумага'?")) {
   // let word1user = prompt('Введи любое слово из трех: камень; ножницы; бумага.');
@@ -39,19 +39,19 @@ let wordUsEsc;
     }
     if (signFault !== 0) {
       if (signFault === 3) {
-        document.getElementById("app5").innerHTML = `
-        <h1>Сам такой!!</h1>
-        <img src="img/провал.png" alt="Fail" width="500">
-        `;
-        confirm(rem4);
+        // document.getElementById("app5").innerHTML = `
+        // <h1>Сам такой!!</h1>
+        // <img src="img/провал.png" alt="Fail" width="500">
+        // `;
+        // confirm(rem4);
         console.log(rem4);
       } else {
-        document.getElementById("app5").innerHTML = `
-        <h1>Что-то не так!!!</h1>
-        <img src="img/Слово.png" alt="Fail word" width="500">
-        `;
+        // document.getElementById("app5").innerHTML = `
+        // <h1>Что-то не так!!!</h1>
+        // <img src="img/Слово.png" alt="Fail word" width="500">
+        // `;
         console.log(rem1 + "'" + signFaultWord + "'?" + rem2);
-        confirm(rem1 + "'" + signFaultWord + "'?" + rem2);
+        // confirm(rem1 + "'" + signFaultWord + "'?" + rem2);
       }
     }
 
@@ -72,40 +72,40 @@ let wordUsEsc;
     let wordNumSum = word1num + word2num;
 
     if (word1userLow === word2userLow) {
-      document.getElementById("app4").innerHTML = `
-      <h1>Тоже неплохо!!!</h1>
-      <img src="img/ничья 2.png" alt="Game" width="500">
-      `;
-      confirm(rem3 + act4); //ничья
+      // document.getElementById("app4").innerHTML = `
+      // <h1>Тоже неплохо!!!</h1>
+      // <img src="img/ничья 2.png" alt="Game" width="500">
+      // `;
+      // confirm(rem3 + act4); //ничья
       console.log(rem3 + act4);
     } else if (wordNumSum === 3) {
-      document.getElementById("app1").innerHTML = `
-      <h1>Да, камень таки разбивает ножницы.!!!</h1>
-      <img src="img/камень 2.png" alt="Rock" width="500">
-      `;
-      confirm(rem3 + act1);
+      // document.getElementById("app1").innerHTML = `
+      // <h1>Да, камень таки разбивает ножницы.!!!</h1>
+      // <img src="img/камень 2.png" alt="Rock" width="500">
+      // `;
+      // confirm(rem3 + act1);
       console.log(rem3 + act1); //камень
     } else if (wordNumSum === 4) {
-      document.getElementById("app3").innerHTML = `
-      <h1>Да, бумага таки заворачивает камень.!!!</h1>
-      <img src="img/бумага 2.png" alt="Paper" width="500">
-      `;
-      confirm(rem3 + act3);
+      // document.getElementById("app3").innerHTML = `
+      // <h1>Да, бумага таки заворачивает камень.!!!</h1>
+      // <img src="img/бумага 2.png" alt="Paper" width="500">
+      // `;
+      // confirm(rem3 + act3);
       console.log(rem3 + act3); //бумага
     } else if (wordNumSum === 5) {
-      document.getElementById("app2").innerHTML = `
-      <h1>Да, ножницы таки режут бумагу.!!!</h1>
-      <img src="img/ножницы 2.png" alt="Scissors" width="500">
-      `;
-      confirm(rem3 + act2);
+      // document.getElementById("app2").innerHTML = `
+      // <h1>Да, ножницы таки режут бумагу.!!!</h1>
+      // <img src="img/ножницы 2.png" alt="Scissors" width="500">
+      // `;
+      // confirm(rem3 + act2);
       console.log(rem3 + act2); //ножницы
     }
   } else {
-    document.getElementById("app5").innerHTML = `
-    <h1>Сам такой!!</h1>
-    <img src="img/провал.png" alt="Fail" width="500">
-    `;
-    confirm(rem4);
+    // document.getElementById("app5").innerHTML = `
+    // <h1>Сам такой!!</h1>
+    // <img src="img/провал.png" alt="Fail" width="500">
+    // `;
+    // confirm(rem4);
     console.log(rem4); //фигвам
   }
 // }
