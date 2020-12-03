@@ -1,0 +1,15 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: aqua;
+}
+
+.text {
+    margin: 0;
+    padding: 0;
+    color: maroon;
+    font-kerning: normal;
+    font-family: "Autor";
+    font-weight: 100;
+    font-style: initial;
+}
