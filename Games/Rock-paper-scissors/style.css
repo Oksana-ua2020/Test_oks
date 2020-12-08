@@ -1,11 +1,22 @@
 body {
-    margin: 0;
+    margin: 10px;
     padding: 0;
 }
 
 .field {
+    width: 400px;
     display: flex;
-    background-color: aqua;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.lookButton {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 120px;
+    height: 60px;
+    background-color: whitesmoke;
 }
 
 .text {

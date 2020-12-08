@@ -9,25 +9,40 @@
 </head>
 
 <body>
-    <div class="field">
-        <img src="img/start.png" alt="Start">
-        <h1 class="text"> <i> Привет! Сыграем? Только смотри, чтобы противник не подглядывал))</i></h1>
+    <div>
+        <h1 class="text"> <i> Привет! Сыграем? ))</i></h1><br>
     </div>
-    <form>
+    <form >
         <div>
             <h1 class="text"> <i>Игрок 1 выбирает!</i></h1>
-            <label><input type="radio" name="player1" value="1"></label>
-            <label><input type="radio" name="player1" value="2"></label>
-            <label><input type="radio" name="player1" value="3"></label>
+            <div class="field">
+                <p><button class="lookButton" name="selectionPlayer1" value="1"><img src="img/rock 2.png" alt="Rock">
+                        Rock</button></p>
+                <p><button class="lookButton" name="selectionPlayer1" value="2"><img src="img/scissors 2.png"
+                            alt="Scissors"> Scissors</button></p>
+                <p><button class="lookButton" name="selectionPlayer1" value="3"><img src="img/paper 2.png" alt="Paper">
+                        Paper</button></p>
+            </div>
         </div>
         <div>
             <h1 class="text"> <i>Игрок 2 выбирает!</i></h1>
-            <label><input type="radio" name="player2" value="1"></label>
-            <label><input type="radio" name="player2" value="2"></label>
-            <label><input type="radio" name="player2" value="3"></label>
+            <div class="field">
+                <p><button class="lookButton" name="selectionPlayer2" value="1"><img src="img/rock 2.png" alt="Rock">
+                        Rock</button></p>
+                <p><button class="lookButton" name="selectionPlayer2" value="2"><img src="img/scissors 2.png"
+                            alt="Scissors"> Scissors</button></p>
+                <p><button class="lookButton" name="selectionPlayer2" value="3"><img src="img/paper 2.png" alt="Paper">
+                        Paper</button></p>
+            </div>
         </div>
+        <div class="field">
+            <h1 class="text"> <i> Что же по итогу?</i></h1>
+            <p><button class="lookButton" onclick="resultButtonClick()"><img src="img/draw 2.png"
+                        alt="Result">Result</button></p>
+        </div>
+        <div id="gameResult"></div>
     </form>
-    <!-- <script defer src="main.js"></script> -->
+    <script defer src="main.js"></script>
 </body>
 
 </html>
