@@ -10,31 +10,25 @@
 
 <body>
     <div>
-        <h1 class="text"> <i> Привет! Сыграем? ))</i></h1><br>
+        <h1 class="text">
+            <i> Привет! Сыграем? ))</i>
+        </h1>
+        <br>
     </div>
-    <form action="javascript:void(0);">
-        <div>
-            <h1 class="text"> <i>Игрок 1 выбирает!</i></h1>
-            <div class="field">
-                <p><button class="lookButton" onclick="fixedChoice(1,1)"><img src="img/rock.png" alt="Rock">Rock</button></p>
-                <p><button class="lookButton" onclick="fixedChoice(1,2)"><img src="img/scissors.png" alt="Scissors">Scissors</button></p>
-                <p><button class="lookButton" onclick="fixedChoice(1,3)"><img src="img/paper.png" alt="Paper">Paper</button></p>
-            </div>
-        </div>
-        <div>
-            <h1 class="text"> <i>Игрок 2 выбирает!</i></h1>
-            <div class="field">
-                <p><button class="lookButton" onclick="fixedChoice(2,1)"><img src="img/rock.png" alt="Rock">Rock</button></p>
-                <p><button class="lookButton" onclick="fixedChoice(2,2)"><img src="img/scissors.png" alt="Scissors"> Scissors</button></p>
-                <p><button class="lookButton" onclick="fixedChoice(2,3)"><img src="img/paper.png" alt="Paper">Paper</button></p>
-            </div>
-        </div>
-        <div class="field">
-            <h1 class="text"> <i> Что же по итогу?</i></h1>
-            <p><button class="lookButton" onclick="resultButtonClick()"><img src="img/result.png" alt="Result">Result</button></p>
-        </div>
-        <div id="gameResult"></div>
-    </form>
+    <div class="playersChoise"></div>
+    <div class="field">
+        <h1 class="text"> 
+            <i> Что же по итогу?</i>
+        </h1>
+        <p>
+            <button class="lookButton" onclick="resultButtonClick()">
+                <img src="img/result.png" alt="Result">
+                <span>Result</span>
+            </button>
+        </p>
+    </div>
+    <div id="gameResult"></div>
+    <script src="render.js"></script>
     <script defer src="main.js"></script>
 </body>
 
