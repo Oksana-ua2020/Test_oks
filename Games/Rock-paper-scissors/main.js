@@ -64,7 +64,7 @@ function resultButtonClick() {
 
     document.getElementById("gameResult").innerHTML = `
         <img src=${gameResult.img}>    
-        <h1 class="text">${gameResult.text}</h1>
+        <h1 class="text"><i>${gameResult.text}</i></h1>
     `;
 
     playersChoise = {
