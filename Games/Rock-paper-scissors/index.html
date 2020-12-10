@@ -12,33 +12,26 @@
     <div>
         <h1 class="text"> <i> Привет! Сыграем? ))</i></h1><br>
     </div>
-    <form >
+    <form action="javascript:void(0);">
         <div>
             <h1 class="text"> <i>Игрок 1 выбирает!</i></h1>
             <div class="field">
-                <p><button class="lookButton" name="selectionPlayer1" value="1"><img src="img/rock 2.png" alt="Rock">
-                        Rock</button></p>
-                <p><button class="lookButton" name="selectionPlayer1" value="2"><img src="img/scissors 2.png"
-                            alt="Scissors"> Scissors</button></p>
-                <p><button class="lookButton" name="selectionPlayer1" value="3"><img src="img/paper 2.png" alt="Paper">
-                        Paper</button></p>
+                <p><button class="lookButton" onclick="fixedChoice(1,1)"><img src="img/rock.png" alt="Rock">Rock</button></p>
+                <p><button class="lookButton" onclick="fixedChoice(1,2)"><img src="img/scissors.png" alt="Scissors">Scissors</button></p>
+                <p><button class="lookButton" onclick="fixedChoice(1,3)"><img src="img/paper.png" alt="Paper">Paper</button></p>
             </div>
         </div>
         <div>
             <h1 class="text"> <i>Игрок 2 выбирает!</i></h1>
             <div class="field">
-                <p><button class="lookButton" name="selectionPlayer2" value="1"><img src="img/rock 2.png" alt="Rock">
-                        Rock</button></p>
-                <p><button class="lookButton" name="selectionPlayer2" value="2"><img src="img/scissors 2.png"
-                            alt="Scissors"> Scissors</button></p>
-                <p><button class="lookButton" name="selectionPlayer2" value="3"><img src="img/paper 2.png" alt="Paper">
-                        Paper</button></p>
+                <p><button class="lookButton" onclick="fixedChoice(2,1)"><img src="img/rock.png" alt="Rock">Rock</button></p>
+                <p><button class="lookButton" onclick="fixedChoice(2,2)"><img src="img/scissors.png" alt="Scissors"> Scissors</button></p>
+                <p><button class="lookButton" onclick="fixedChoice(2,3)"><img src="img/paper.png" alt="Paper">Paper</button></p>
             </div>
         </div>
         <div class="field">
             <h1 class="text"> <i> Что же по итогу?</i></h1>
-            <p><button class="lookButton" onclick="resultButtonClick()"><img src="img/draw 2.png"
-                        alt="Result">Result</button></p>
+            <p><button class="lookButton" onclick="resultButtonClick()"><img src="img/result.png" alt="Result">Result</button></p>
         </div>
         <div id="gameResult"></div>
     </form>
