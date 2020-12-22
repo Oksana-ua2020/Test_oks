@@ -28,22 +28,30 @@
     let resultMax;
     let arr3Ascending = [...arr3];
     let arr3Descending = [...arr3];
-    let arrUser = [];
+    let resultComparison = [];
+    let resultComparisonFilter = [];
+    let resultComparisonFind = "нет";
     let userNumber = 7;
     
-    
-    arr3.forEach(function(item){
-      result += item;
+    resultComparisonFilter = arr3.filter((item, index) => item === userNumber);
+    if (arr3.find(item => item === userNumber)){resultComparisonFind = "есть"
+    };
+    resultComparison.push(userNumber);
+    resultComparison.push(resultComparisonFind)
+    resultComparison.push(resultComparisonFilter.length)
+    arr3.forEach(function(item, index){
+      if (item === userNumber) { resultComparison.push(index)}
     });
-    
     resultMin = Math.min.apply(null, arr3)
     resultMax = Math.max.apply(null, arr3)
     arr3Ascending.sort((a, b) => a - b);
     arr3Descending.sort((a, b) => b - a);
     
-    console.log (arr3);
-    console.log (resultMin);
-    console.log (resultMax);
-    console.log (arr3Ascending);
-    console.log (arr3Descending);
+    console.log ("Задание № 3");
+    console.log ("arr", arr3);
+    console.log ("Min", resultMin);
+    console.log ("Max", resultMax);
+    console.log ("Ascending", arr3Ascending);
+    console.log ("Descending", arr3Descending);
+    console.log ("Число, наличие, Количество повторений, Индексы..." ,resultComparison);
     
