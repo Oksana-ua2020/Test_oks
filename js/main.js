@@ -24,24 +24,26 @@
     console.log ("Sum", resultSum);
     /////
     let arr3 = [...Array(30)].map(_=>Math.round(Math.random()*20-10));
-    let resultMin = 0;
-    let resultMax = 0;
-    let descending = [];
-    let Increasing = [];
-    let arr3My = arr3.slice();
-
-    // arr3.forEach(function(item){
-    //   result += item;
-    // });
-    arr3My.sort();
-
+    let resultMin;
+    let resultMax;
+    let arr3Ascending = [...arr3];
+    let arr3Descending = [...arr3];
+    let arrUser = [];
+    let userNumber = 7;
+    
+    
+    arr3.forEach(function(item){
+      result += item;
+    });
+    
     resultMin = Math.min.apply(null, arr3)
     resultMax = Math.max.apply(null, arr3)
+    arr3Ascending.sort((a, b) => a - b);
+    arr3Descending.sort((a, b) => b - a);
     
-    
-    console.log ("Задание № 3");
-    console.log ("arr", arr3);
-    console.log (arr3My);
-
+    console.log (arr3);
     console.log (resultMin);
     console.log (resultMax);
+    console.log (arr3Ascending);
+    console.log (arr3Descending);
+    
