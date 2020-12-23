@@ -18,10 +18,7 @@
     }
 
     function calcSum() {
-      let resultSum = 0;
-      arr2.forEach(function (item) {
-        resultSum += item;
-      });
+      let resultSum = arr2.reduce((sum, item) => sum + item, 0);
 
       console.log("Задание № 2");
       console.log("arr", arr2);
