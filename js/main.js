@@ -60,6 +60,29 @@
       console.log("Descending", arr3Descending);
       console.log("Число, наличие, Количество повторений, Индексы...", resultComparison);
     }
+
+    function resultGetRepeat() {
+      let arr3Repeat = [...arr3];
+      let objRepeat = {};
+
+      arr3Repeat.sort((a, b) => a - b);
+
+      function getRepeat(element, number) {
+        return {
+          element,
+          number
+        };
+      }
+
+      arr3Repeat.forEach(function (item, index) {
+
+
+      });
+
+      console.log(arr3);
+      console.log(arr3Repeat);
+    }
+
     getEvenOdd();
     calcSum();
     showSortArr();
