@@ -1,4 +1,4 @@
-    "use strict"
+   "use strict"
     let arr = [1, 2, 3, 4, 5, 6, 7];
     let arr2 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
     let arr3 = [...Array(30)].map(_ => Math.round(Math.random() * 20 - 10));
@@ -58,31 +58,31 @@
       console.log("Max", resultMax);
       console.log("Ascending", arr3Ascending);
       console.log("Descending", arr3Descending);
+      resultGetRepeat();
       console.log("Число, наличие, Количество повторений, Индексы...", resultComparison);
     }
 
     function resultGetRepeat() {
       let arr3Repeat = [...arr3];
       let objRepeat = {};
-
+    
       arr3Repeat.sort((a, b) => a - b);
-
-      function getRepeat(element, number) {
-        return {
-          element,
-          number
-        };
-      }
-
+    
+      let number = 0;
+      
       arr3Repeat.forEach(function (item, index) {
-
-
+        let elementPlus = arr3Repeat [++index];
+        if (item == elementPlus) {
+          number++;
+        } else if (number > 0) {
+          objRepeat[item] = ++number;
+          number = 0;
+        }
       });
-
-      console.log(arr3);
-      console.log(arr3Repeat);
+    
+      console.log ("Repeat", objRepeat);
     }
-
+    
     getEvenOdd();
     calcSum();
     showSortArr();
