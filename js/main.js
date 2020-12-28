@@ -87,23 +87,22 @@
     
     function arrButton() {
       let arr4Button = [...arr4];
-      let countButton = Math.ceil(arr4Button.length/10);
-      
+      let countButton = Math.ceil(arr4Button.length / 10);
+
       for (let i = 1; i <= countButton; i++) {
-        let comment = (i*10-10)+ " - " + ((i*10-1)>arr4Button.length ? arr4Button.length : (i*10-1));
+        let comment = (i * 10 - 10) + " - " + ((i * 10 - 1) > arr4Button.length ? arr4Button.length : (i * 10 - 1));
         document.getElementById("app").innerHTML += `
         <p><button class="button" onclick="fixedChoice(2,1)"><alt="Choice">${comment}</button></p>
         `;
-      
       }
-      
-      console.log (arr4);
-      console.log (countButton);
-      }
-      
-      arrButton();
-          
-    
+
+      console.log(arr4);
+      console.log(countButton);
+    }
+
+    arrButton();
+
+
     getEvenOdd();
     calcSum();
     showSortArr();
