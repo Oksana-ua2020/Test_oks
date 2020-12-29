@@ -4,9 +4,15 @@ body {
     display: flex;
     
   }
+
   .button {
     height: 20px; 
     width: 90px; 
     text-align: center;
   }
   
+  .resultChoice {
+    width: max-content;
+    height: 100;
+    margin: 10px;
+  }
