@@ -120,6 +120,6 @@
    }
 
    arrButton();
-   //  getEvenOdd();
-   //  calcSum();
-   //  showSortArr();
+   getEvenOdd();
+   calcSum();
+   showSortArr();
