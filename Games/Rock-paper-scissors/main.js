@@ -1,45 +1,74 @@
+const wins1 = 'img/wins1.png';
+const wins2 = 'img/wins2.png';
+const draw = 'img/draw.png';
+const fail = 'img/fail.png';
+
 const possibleOutcome = {
-    "11": 'Ничья',
-    "12": 'Победа игрока 1, камень разбивает ножницы.',
-    "13": 'Победа игрока 2, бумага заворачивает камень.',
-    "21": 'Победа игрока 2, камень разбивает ножницы.',
-    "22": 'Ничья',
-    "23": 'Победа игрока 1, ножницы режут бумагу.',
-    "31": 'Победа игрока 1, бумага заворачивает камень.',
-    "32": 'Победа игрока 2, ножницы режут бумагу.',
-    "33": 'Ничья',
-    "00": 'Кто-то из игроков не выбрал. Это провал. Повторите попытку.',
+    "11": {
+        text: 'Ничья',
+        img: draw
+    },
+    "12": {
+        text: 'Победа игрока 1, камень разбивает ножницы.',
+        img: wins1
+    },
+    "13": {
+        text: 'Победа игрока 2, бумага заворачивает камень.',
+        img: wins2
+    },
+    "21": {
+        text: 'Победа игрока 2, камень разбивает ножницы.',
+        img: wins2
+    },
+    "22": {
+        text: 'Ничья',
+        img: draw
+    },
+    "23": {
+        text: 'Победа игрока 1, ножницы режут бумагу.',
+        img: wins1
+    },
+    "31": {
+        text: 'Победа игрока 1, бумага заворачивает камень.',
+        img: wins1
+    },
+    "32": {
+        text: 'Победа игрока 2, ножницы режут бумагу.',
+        img: wins2
+    },
+    "33": {
+        text: 'Ничья',
+        img: draw
+    },
+}
+const errorMessage = {
+    text: 'Кто-то из игроков не выбрал. Это провал. Повторите попытку.',
+    img: fail
 }
 
-let selectionPlayer1 = '0';
-let selectionPlayer2 = '0';
-let wins1 = 'img/wins1.png';
-let wins2 = 'img/wins2.png';
-let draw = 'img/draw.png';
-let fail = 'img/fail.png';
+let playersChoise = {
+    1: '0',
+    2: '0'
+}
 
-function fixedChoice(player, choice) {
-    let cast = String(choice);
-    if (player == '1') {
-        selectionPlayer1 = cast
-    } else selectionPlayer2 = cast;
+function fixedChoice(player, choise) {
+    playersChoise[player] = String(choise);
 }
 
 function resultButtonClick() {
-    let result = selectionPlayer1 + selectionPlayer2;
-    let check = result < '11' ? (result = '00') : result;
-    const winMessage = possibleOutcome[result];
-    let picture;
-    if (winMessage.includes('Ничья', )) {
-        picture = draw
-    } else if (winMessage.includes('игрока 1')) {
-        picture = wins1
-    } else if (winMessage.includes('игрока 2', )) {
-        picture = wins2
-    } else picture = fail;
+    const result = playersChoise[1] + playersChoise[2];
+    const gameResult = {
+        text: (possibleOutcome[result] && possibleOutcome[result].text) || errorMessage.text,
+        img: (possibleOutcome[result] && possibleOutcome[result].img) || errorMessage.img
+    }
+
     document.getElementById("gameResult").innerHTML = `
-    <img src=${picture}>    
-    <h1 class="text">${winMessage}</h1>`;
-    selectionPlayer1 = '0';
-    selectionPlayer2 = '0';
+        <img src=${gameResult.img}>    
+        <h1 class="text">${gameResult.text}</h1>
+    `;
+
+    playersChoise = {
+        1: '0',
+        2: '0'
+    }
 }
